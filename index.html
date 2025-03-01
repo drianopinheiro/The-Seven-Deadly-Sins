@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Nanatsu no Taizai</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1>Nanatsu no Taizai</h1>
+        <div class="hamburguer" id="hamburguer" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#home">Início</a>
+          <a href="#personagens">Personagens</a>
+          <a href="#história">História</a>
+          <a href="#temporadas">Temporadas</a>
+          <a href="#galeria">Galeria</a>
+        </div>
+      </nav>
+
+      <div class="information">
+        <div class="margin">
+          <h1>The Seven Deadly Sins</h1>
+        </div>
+
+        <div class="margin">
+          <span>Estrelando:Yuki Kaji, Sora Amamiya, Misaki Kuno</span>
+        </div>
+
+        <div class="margin">
+          <span class="indicative-rating">A14</span><span>DUB/LEG</span
+          ><span>ANIME 2025</span>
+        </div>
+
+        <div class="margin">
+          <span>Nota Média: 4.9 (520.6k)</span>
+        </div>
+
+        <div class="margin">
+          <span
+            >Depois que seu reino é dominado por tiranos, uma princesa <br />
+            tenta encontrar um grupo de cavaleiros perigosos para ajudar a
+            recuperar suas terras.</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- section 1 -->
+    <!-- Adicionamos o id "background" para o JS atualizar o fundo -->
+    <section id="personagens" class="section-1">
+      <div class="container-div1">
+        <div class="content-wrapper">
+          <h1 id="personagem-nome">Meliodas</h1>
+          <p id="descricao">
+            capitão dos Sete Pecados Capitais e o seu principal pecado é o Ira
+            do Dragão . É o protagonista e dono do bar Chapéu de Javali.
+            Raramente fica bravo e é muito brincalhão, pervertido, confiante e
+            gentil com aqueles que se importam. Faz parte do clã dos demônios.
+          </p>
+          <div class="flex-container">
+            <h2 id="pecado">Pecado da Ira do Dragão</h2>
+            <img id="simbolo" src="assets/simbolo/meliodas.png" alt="" />
+          </div>
+
+          <!-- Exemplo de elemento da barra de poder na área principal do personagem -->
+          <div class="status-container">
+            <span id="status-text">Força: 80 / 100</span>
+            <div id="status-bar" class="status-bar" style="width: 80%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container-div2">
+        <div class="img-personagem">
+          <img id="imagem" src="assets/personagens/Meliodas.png" alt="" />
+        </div>
+      </div>
+      <div class="container-div3">
+        <section class="nav-herois">
+          <ul>
+            <li>
+              <a
+                onclick="mudarPersonagem('Meliodas', 'Meliodas.png', 'capitão dos Sete Pecados Capitais e o seu principal pecado é o Ira do Dragão . É o protagonista e dono do bar Chapéu de Javali. Raramente fica bravo e é muito brincalhão, pervertido, confiante e gentil com aqueles que se importam. Faz parte do clã dos demônios.', 'Pecado da Ira do Dragão', 'assets/simbolo/meliodas.png', 80, 'high', '', 'meliodas.png')"
+                >Meliodas</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="mudarPersonagem('Ban', 'Ban.png', 'um membro dos Sete Pecados Capitais, conhecido como o Pecado da Ganância da Raposa. Após o grupo se separar, Ban foi preso pelo grupo Presas Tortuosas na Prisão de Baste, mas escapou quando soube que Meliodas estava vivo à sua procura. Além de ser imortal, ele é conhecido por sua habilidade, Snatch..', 'Pecado da Ganância da Raposa', 'assets/simbolo/ban.png', 70, 'medium', '', 'ban.png')"
+                >Ban</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="mudarPersonagem('Elizabeth', 'Elizabeth.png', 'Ela é a terceira princesa adotiva do Reino de Liones e a atual rainha do país. Elizabeth é também a amante de Meliodas, o capitão dos Sete Pecados Capitais. ', 'Nenhum Pecado', 'assets/simbolo/elizabeth.png', 30, 'low', '', 'elizabeth.png')"
+                >Elizabeth</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="mudarPersonagem('Diane', 'Diane.png', 'Diane é um membro dos Sete Pecados Capitais e é conhecida como o Pecado da Inveja da Serpente, além de ser a Rainha das Fadas. Ela é um membro do Clã dos Gigantes, e é muito maior do que as pessoas comuns, incluindo seus companheiros dos Sete Pecados Capitais.', 'Pecado da Serpente da Inveja', 'assets/simbolo/diane.png', 85, 'high', '', 'diane.png')"
+                >Diane</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="mudarPersonagem('Merlin', 'Merlin.png', 'O pecado capital da Gula do Javali. Aparenta ter um caráter lúdico. Ela gosta de zombar e de desafiar os outros e se mostra bastante sábia em suas palavras. Merlim é uma mulher relativamente alta, com aparência “pecaminosa” e com uma personalidade sapiente.', 'Pecado da Gula do Javali', 'assets/simbolo/merlin.png', 90, 'high', '', 'merlin.png')"
+                >Merlin</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="mudarPersonagem('Escanor', 'Escanor.png', 'Pecado do Leão do Orgulho dos Sete Pecados Capitais, o ex-segundo príncipe do Reino de Castellio, e o homem conhecido em todo o Reino de Liones como o Cavaleiro Sagrado Mais Forte', 'Pecado do Orgulho do Leão', 'assets/simbolo/escanor.png', 100, 'high', '', 'escanor.png')"
+                >Escanor</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="mudarPersonagem('King', 'King.png', 'Toda a trajetória de King começou à mais de 700 anos, antes do início das aventuras dos pecados, como cavalheiros lendários do reino. Harlequin, foi coroado o rei fada pela árvore sagrada e presenteado com a Lança Espiritual Chastiefol.', 'Pecado da Preguiça do Urso', 'assets/simbolo/king.png', 60, 'medium', '', 'king.png')"
+                >King</a
+              >
+            </li>
+            <li>
+              <a
+                onclick="mudarPersonagem('Gowther', 'Gowther.png', 'pecado capital da Luxúria da Cabra. Ele é incapaz de ter sentimentos ou emoções, além de não entender muito sobre interações sociais, mas faz o seu melhor para tentar entendê-las, passando muito de seu tempo com leituras. É observador, indiferente e extremamente lógico.', 'Pecado da Luxúria da Cabra', 'assets/simbolo/gowther.png', 50, 'medium', '', 'gowther.png')"
+                >Gowther</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <!-- Seção História -->
+    <section id="história" class="historia-section">
+      <h2>História</h2>
+      <p>
+        <strong>Nanatsu no Taizai</strong> conta a história dos Sete Pecados
+        Capitais, um grupo de cavaleiros que são injustamente perseguidos pelo
+        Reino de Liones. Eles enfrentam ameaças sobrenaturais, como demônios e
+        outros inimigos poderosos, enquanto buscam restaurar a paz em Britannia.
+      </p>
+      <img src="assets/a-1.jpg" alt="Cena de batalha" />
+    </section>
+
+    <!-- TEMPORADAS -->
+    <section id="temporadas" class="section-temporadas">
+      <h1>Temporadas:</h1>
+      <div class="temporadas">
+        <div class="temporada">
+          <img src="assets/temporada/T1.png" alt="Temporada 1" />
+          <div class="numero">Nanatsu no Taizai: The Seven Deadly Sins</div>
+        </div>
+        <div class="temporada">
+          <img src="assets/temporada/T2.png" alt="Temporada 2" />
+          <div class="numero">Nanatsu no Taizai 2: Imashime no Fukkatsu</div>
+        </div>
+        <div class="temporada">
+          <img src="assets/temporada/T3.png" alt="Temporada 3" />
+          <div class="numero">Nanatsu no Taizai 3: Kamigami no Gekirin</div>
+        </div>
+        <div class="temporada">
+          <img src="assets/temporada/T4.png" alt="Temporada 4" />
+          <div class="numero">Nanatsu no Taizai 4: Fundo no Shinpan</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇAO DE RADADA -->
+    <div class="container">
+      <main>
+        <h1 class="hero-title">"Mergulhe no Mundo do Anime!"</h1>
+        <p class="hero-subtitle">
+          Mergulhe em aventuras incríveis, mundos fantásticos e histórias
+          emocionantes. Conheça mais sobre <strong>Nanatsu no Taizai</strong> e
+          outros animes.
+        </p>
+
+        <!-- Container de imagens estilo cards -->
+        <div class="hero-images">
+          <div class="image-card">
+            <img src="assets/a-1.jpg" alt="Anime Image 1" />
+          </div>
+          <div class="image-card">
+            <img src="assets/a-2.jpg" alt="Anime Image 2" />
+          </div>
+        </div>
+
+        <!-- Seção de Destaque: Nanatsu no Taizai -->
+        <div class="highlight-section">
+          <h2>Nanatsu no Taizai</h2>
+          <p class="highlight-text">
+            Descubra Nanatsu no Taizai, a saga dos lendários cavaleiros
+            pecadores em uma batalha épica para salvar o Reino de Liones. Com
+            poderes incríveis, mistérios e reviravoltas, essa aventura vai te
+            prender do começo ao fim. Venha conhecer essa história fascinante!
+          </p>
+          <button class="download-btn" onclick="baixarImagem()">Download</button>
+        </div>
+      </main>
+
+      <aside>
+        <button class="download-lancamento">Lançamento</button>
+      </aside>
+    </div>
+    <!-- fim do conteudo main e aside -->
+
+    <!-- GALERIA DE IMAGENS -->
+    <div id="galeria" class="gallery-section">
+      <div class="gallery-container">
+        <div class="image-container">
+          <img class="image" src="assets/gallery/g1.jpg" alt="Imagem 1" />
+          <img class="image" src="assets/gallery/g2.jpg" alt="Imagem 2" />
+          <img class="image" src="assets/gallery/g3.jpg" alt="Imagem 3" />
+          <img class="image" src="assets/gallery/g4.jpg" alt="Imagem 4" />
+          <img class="image" src="assets/gallery/g5.jpg" alt="Imagem 5" />
+          <img class="image" src="assets/gallery/g6.jpg" alt="Imagem 6" />
+          <img class="image" src="assets/gallery/g7.jpg" alt="Imagem 7" />
+          <img class="image" src="assets/gallery/g8.jpg" alt="Imagem 8" />
+          <img class="image" src="assets/gallery/g9.jpg" alt="Imagem 9" />
+          <img class="image" src="assets/gallery/g10.jpg" alt="Imagem 10" />
+        </div>
+        <button id="prev" class="btn">&#10094;</button>
+        <button id="next" class="btn">&#10095;</button>
+      </div>
+    </div>
+    <!-- FIM DA GALERIA -->
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades" class="curiosidades-section">
+      <h2>Curiosidades</h2>
+      <p>
+        Você sabia que os Sete Pecados Capitais têm origens mitológicas? Cada
+        pecado é inspirado em um personagem com características ligadas a um dos
+        pecados capitais clássicos. Por exemplo, Meliodas representa a Ira,
+        enquanto Ban representa a Ganância.
+      </p>
+      <ul>
+        <li>A série foi inspirada por lendas e mitos europeus.</li>
+        <li>O anime foi adaptado de um mangá de Nakaba Suzuki.</li>
+        <li>
+          A história mistura elementos de fantasia medieval com temas de ação e
+          aventura.
+        </li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Copyright © 2025 The Seven Deadly Sins. All Rights Reserved.</p>
+    </footer>
+
+    <a href="#">
+      <img src="assets/up.png" alt="Ícone Fixo" class="icone-fixo" />
+    </a>
+  </body>
+</html>

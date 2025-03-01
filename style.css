@@ -1,0 +1,757 @@
+:root {
+  --cor-white: #f4f4f4;
+  --cor-bege: #f8f4e6;
+  --cor-black: #1a1a1a;
+
+  --cor-body: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-black); /* bege claro */
+}
+
+h1 {
+  color: var(--cor-white);
+  font-weight: bold;
+}
+
+header {
+  background-image: url("assets/tag.png"); /* Imagem de fundo */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor-black);
+  color: var(--cor-white);
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  position: static;
+  background: transparent;
+  width: auto;
+  opacity: 1;
+  transform: none;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.menu.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+.menu a {
+  color: #ffcc00;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ff6600;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.menu a:hover {
+  background: #ff6600;
+  color: var(--cor-black);
+}
+
+/* Esconder o hambúrguer em telas grandes */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+.hamburguer div {
+  width: 30px;
+  height: 4px;
+  background: var(--cor-white);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  position: absolute;
+}
+.hamburguer div:nth-child(1) {
+  top: 0;
+}
+.hamburguer div:nth-child(2) {
+  top: 10px;
+}
+.hamburguer div:nth-child(3) {
+  top: 20px;
+}
+.hamburguer.active div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburguer.active div:nth-child(2) {
+  opacity: 0;
+}
+.hamburguer.active div:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Esconder o hambúrguer em telas grandes fim */
+
+/* informações da header  */
+.information {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  padding: 100px;
+}
+
+.indicative-rating {
+  background-color: #d66a04;
+  color: var(--cor-white);
+  border: 1px solid var(--cor-white);
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.information .margin {
+  margin: 5px;
+}
+
+span {
+  color: var(--cor-white);
+  margin-left: 5px;
+}
+/* fim das informações da header  */
+
+/* Adicionado o id "background" para que o JS atualize o fundo*/
+.section-1 {
+  background-image: url("assets/fundo/meliodas.png"); /*  Imagem de fundo  */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+}
+
+.container-div1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: 200px;
+  height: 100%;
+}
+
+.container-div1 .content-wrapper {
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid var(--cor-white);
+  max-width: 450px;
+}
+
+.container-div1 h1,
+.container-div1 h2,
+.container-div1 p {
+  margin-top: 15px;
+  color: var(--cor-white);
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container img {
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  border: 2px solid var(--cor-white);
+}
+
+/* CSS para estilizar a barra de poder */
+.status-container {
+  width: 100%;
+  margin: 10px 0;
+  color: var(--cor-white);
+  font-size: 3rem;
+}
+
+.status-bar {
+  background-color: var(--cor-white);
+  width: 0%; /* valor inicial */
+  height: 10px;
+  border-radius: 5px;
+  transition: 1s ease-in-out;
+}
+
+.status-text {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.container-div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+  margin: 20px;
+}
+
+.container-div2 .img-personagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-div2 .img-personagem img {
+  width: 100%;
+  height: auto;
+  border: 5px solid var(--cor-white);
+}
+
+.container-div3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  padding: 2rem;
+}
+
+.nav-herois {
+  background-color: transparent;
+  backdrop-filter: blur(30px);
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid var(--cor-white);
+}
+
+.nav-herois ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-herois ul li {
+  text-align: left;
+}
+
+.nav-herois ul li a {
+  color: var(--cor-white);
+  text-decoration: none;
+  font-size: 18px;
+  transition: 5s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-herois ul li a:hover {
+  color: var(--cor-white);
+}
+
+/* aqui termina a section-1 */
+
+/* historia */
+.historia-section {
+  padding: 40px;
+  background-color: var(--cor-black);
+  color: var(--cor-white);
+  text-align: center;
+}
+
+.historia-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #daa520; /* Dourado, inspirado nos cavaleiros */
+  margin-bottom: 20px;
+}
+
+.historia-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.historia-section img {
+  width: 65%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--cor-black);
+}
+
+/* temporadas */
+.section-temporadas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--cor-black);
+  padding: 20px;
+  box-shadow: 0 0 10px var(--cor-black);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--cor-white);
+}
+
+.temporadas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.temporada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: #333;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.temporada:hover {
+  transform: scale(1.05);
+}
+
+.temporada img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.numero {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--cor-white);
+}
+
+/* INFORMAÇÕES */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+  background-color: var(--cor-bege); /* bege claro */
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0 0 10px var(--cor-black);
+}
+
+/* MAIN (Hero) */
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--cor-black);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Container de imagens estilo “cards” */
+.hero-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.image-card {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  border: 3px solid var(--cor-black);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--cor-white); /* para dar contraste */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Seção de Destaque (Nanatsu no Taizai) */
+.highlight-section {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.highlight-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.highlight-text {
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.download-btn {
+  background-color: var(--cor-black);
+  color: var(--cor-white);
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid var(--cor-white);
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px var(--cor-black);
+}
+
+.download-btn:hover {
+  background-color: var(--cor-white);
+  color: var(--cor-black);
+  border-color: var(--cor-black);
+  box-shadow: 0 6px 8px var(--cor-black);
+  transform: translateY(-3px); /* Efeito de elevação */
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 500px;
+  height: 100vh;
+  padding: 4rem 2rem;
+  background-image: url("assets/Dandadan.jpg"); /* Imagem de fundo */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.download-lancamento {
+  background-color: #daa520; /* Dourado, inspirado no ouro e nas cores dos cavaleiros */
+  color: var(--cor-white);
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #b8860b; /* Uma borda dourada */
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px var(--cor-black);
+}
+
+.download-lancamento:hover {
+  background-color: #b8860b;
+  border-color: #daa520;
+  box-shadow: 0 6px 8px var(--cor-black);
+  transform: translateY(-3px); /* Efeito de elevação */
+}
+
+/* GALERIA DE IMAGENS */
+.gallery-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gallery-container {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.image {
+  width: 100%;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.image.active {
+  display: block;
+  opacity: 1;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  background-color: var(--cor-black);
+  color: var(--cor-white);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prev {
+  left: -20px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  color: var(--cor-white);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+}
+
+#next {
+  right: -20px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  color: var(--cor-white);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+}
+
+/* FIM GALERIA */
+
+/* Estilo da Seção Curiosidades */
+.curiosidades-section {
+  padding: 40px;
+  background-color: var(--cor-black);
+  color: var(--cor-white);
+  text-align: center;
+}
+
+.curiosidades-section h2 {
+  font-size: 32px;
+  color: #daa520; /* Dourado */
+  margin-bottom: 20px;
+}
+
+.curiosidades-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.curiosidades-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.curiosidades-section ul li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+footer {
+  background-image: url("assets/footer.png"); /* Imagem de fundo */
+  background-size: cover; /* Faz a imagem cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  width: 100%;
+  color: var(--cor-white);
+  text-align: center;
+  padding: 70px;
+}
+
+.icone-fixo {
+  position: fixed; /* Mantém fixo na tela */
+  bottom: 40px; /* Distância do fundo */
+  right: 40px; /* Distância da direita */
+  width: 70px; /* Largura da imagem */
+  height: 70px; /* Altura da imagem */
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse */
+.icone-fixo:hover {
+  transform: scale(1.1); /* Aumenta o tamanho */
+  opacity: 0.8; /* Reduz a opacidade */
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+  header {
+    background-image: url("assets/tag2.png"); /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    width: 100%;
+    height: 100vh;
+  }
+
+  .hamburguer {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--cor-black);
+    width: 100%;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+
+  .information {
+    justify-content: end;
+    height: 75vh;
+    padding: 50px;
+  }
+
+  .information h1 {
+    font-size: 24px;
+  }
+
+  .information span {
+    font-size: 14px;
+  }
+
+  .section-1 {
+    display: block;
+    padding: 10px;
+  }
+
+  .container-div1 {
+    height: 30%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* CSS para estilizar a barra de poder */
+  .status-container {
+    font-size: 14px;
+  }
+
+  .status-bar {
+    margin-top: 5px;
+  }
+
+  /* FOTO PERSONAGEM  */
+  .container-div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+  }
+
+  .container-div2 img {
+    max-width: 60%;
+    max-height: 60%;
+    height: auto;
+  }
+  /* FIM FOTO PERSONAGEM  */
+
+  /* MENU PERSONAGEM  */
+  .container-div3 {
+    justify-content: center;
+
+    height: 20%;
+  }
+
+  .nav-herois ul {
+    flex-direction: row;
+  }
+
+  .nav-herois ul li a {
+    font-size: 12px;
+  }
+
+  /* FIM MENU PERSONAGEM  */
+
+  /* TEMPORADAS */
+  h1 {
+    font-size: 1.5rem;
+  }
+  .temporadas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .temporada {
+    width: 100%;
+    max-width: 300px;
+  }
+  .temporada img {
+    max-width: 100%;
+  }
+  .numero {
+    font-size: 1rem;
+  }
+  /* FIM TEMPORADAS */
+
+  .container {
+    display: block;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+  }
+
+  aside {
+    width: 100%;
+    height: 300px;
+    padding: 2rem;
+  }
+}
