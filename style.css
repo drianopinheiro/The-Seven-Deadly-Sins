@@ -41,7 +41,7 @@ header {
   background-color: var(--cor-black);
   color: var(--cor-white);
   padding: 20px;
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.1);
 }
 .menu {
   display: flex;
@@ -51,7 +51,7 @@ header {
   width: auto;
   opacity: 1;
   transform: none;
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.1);
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
@@ -64,7 +64,6 @@ header {
   color: #ffcc00;
   text-decoration: none;
   padding: 10px 15px;
-  border-bottom: 1px solid #ff6600;
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
